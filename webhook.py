@@ -1,8 +1,6 @@
 import json
 import os
 import requests
-pip install urllib3
-import urllib3
 from flask import Flask
 from flask import request
 from flask import make_response
