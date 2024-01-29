@@ -1,6 +1,6 @@
 import json
 import os
-import requests
+import urllib3.requests.requests
 from flask import Flask
 from flask import request
 from flask import make_response
@@ -24,7 +24,7 @@ def makeResponse(req):
     date=parameters.get("date")
     if city is None:
         return None
-    r=requests.get('http://api.openweathermap.org/data/2.5/forecast?q=' +city+ '&appid=8c7f9d083add3660d543ec5bf00e858d')
+    r=urllib3.requests.get('http://api.openweathermap.org/data/2.5/forecast?q=' +city+ '&appid=8c7f9d083add3660d543ec5bf00e858d')
     json_object=r.json()
     weather=json_object['list']
     for i in range(0,30):
