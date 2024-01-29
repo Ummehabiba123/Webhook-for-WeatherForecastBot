@@ -1,6 +1,6 @@
 import json
 import os
-import urllib3.requests.requests
+import requests
 from flask import Flask
 from flask import request
 from flask import make_response
